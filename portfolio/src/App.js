@@ -21,6 +21,7 @@ function App() {
           <Route path="/projects" component={Projects} />
           <Route path="/contact" component={Contact} />
           <Route path="/about" component={About} />
+          <Redirect to="/" />
         </Switch>
       </body>
     </div>
