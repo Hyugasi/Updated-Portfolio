@@ -3,8 +3,7 @@
   scroll-behavior: smooth;
 }
 header {
-  display: flex;
-  flex-wrap: wrap;
+  margin: 20px;
 }
 header a {
   background-color: #595959;
