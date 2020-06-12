@@ -3,7 +3,8 @@
   scroll-behavior: smooth;
 }
 header {
-  margin: 20px;
+  margin: 0px;
+  background-color: #595959;
 }
 header a {
   background-color: #595959;
