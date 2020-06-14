@@ -15,7 +15,15 @@ function Projects() {
         makeAPICall()
     }, [])
 
-    // const mappedProjects = projectsData.
+    const mappedProjects = projectsData.map((projects, e) => {
+        return (
+            <div key={e}>
+                <img />
+                <h1>{projects.feed.entry.category}</h1>
+                <p></p>
+            </div>
+        )
+    })
     return (
         <div>
             Projects
