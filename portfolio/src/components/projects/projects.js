@@ -1,32 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
-function Projects() {
-    const [projectsData, setProjectsData] = useState([])
+function Projects(props) {
+    console.log(props.projectsData.feed.entry)
 
-    useEffect(() => {
-        const id = `14G7FymaxpdAgNrQGA0VjtZpni3n6LBznLBRQ9fuUbrc`
-        const projectsUrl = `https://spreadsheets.google.com/feeds/list/${id}/od6/public/values?alt=json`
-        const makeAPICall = async () => {
-            const res = await fetch(projectsUrl)
-            const json = await res.json()
-            setProjectsData(json)
-            console.log(json)
-        }
-        makeAPICall()
-    }, [])
-
-    const mappedProjects = projectsData.map((projects, e) => {
+    const projectsData = props.projectsData.feed.entry.map((i, key) => {
         return (
-            <div key={e}>
-                <img />
-                <h1>{projects.feed.entry.category}</h1>
-                <p></p>
+            <div>
+                <div>
+                    <img src={i.gsx$image.$t}/>
+                </div>
             </div>
         )
     })
+    
     return (
         <div>
-            Projects
+            {projectsData}
         </div>
     )
 }
